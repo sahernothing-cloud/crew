@@ -1,0 +1,25 @@
+[project]
+name = "enhanced_twitter_intelligence_platform"
+version = "0.1.0"
+description = "enhanced_twitter_intelligence_platform using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[litellm,tools]==1.9.3",
+    "firecrawl-py",
+]
+
+[project.scripts]
+enhanced_twitter_intelligence_platform = "enhanced_twitter_intelligence_platform.main:run"
+run_crew = "enhanced_twitter_intelligence_platform.main:run"
+train = "enhanced_twitter_intelligence_platform.main:train"
+replay = "enhanced_twitter_intelligence_platform.main:replay"
+test = "enhanced_twitter_intelligence_platform.main:test"
+run_with_trigger = "enhanced_twitter_intelligence_platform.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
